@@ -76,7 +76,7 @@ class NavigationPanelDetails extends Component {
         const rawDescription = gist.brief.description || firstFilename
 
         const { title, description } = descriptionParser(rawDescription)
-        const thumbnailTitle = title.length > 0 ? title : description
+        const thumbnailTitle = firstFilename
         snippetThumbnails.push(
           <li className='snippet-thumnail-list-item' key={ gistId } ref={ gistId }>
             <div className={ this.decideSnippetListItemClass(gistId) }
